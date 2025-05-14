@@ -1,0 +1,200 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.navbar {
+  background-color: #0d253f;
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.search-bar {
+  display: flex;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  width: 300px;
+}
+
+.search-bar button {
+  padding: 8px 16px;
+  background-color: #01b4e4;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0099cc;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.movie-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 15px;
+}
+
+.movie-title {
+  font-weight: bold;
+  color: #0d253f;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.movie-title:hover {
+  color: #01b4e4;
+}
+
+.movie-year {
+  color: #666;
+  font-size: 14px;
+}
+
+.movie-details {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-header {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.movie-poster-large {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.movie-info {
+  flex: 1;
+}
+
+.rating-section, .user-rating {
+  margin: 15px 0;
+}
+
+.cast-list {
+  margin-top: 30px;
+}
+
+.cast-list h3 {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.cast-member {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.cast-name {
+  font-weight: bold;
+}
+
+.cast-character {
+  color: #666;
+  font-size: 14px;
+}
+
+.static-rating, .interactive-rating {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.star {
+  margin-right: 5px;
+}
+
+.interactive-rating label {
+  cursor: pointer;
+}
+
+.interactive-rating input {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .movie-header {
+    flex-direction: column;
+  }
+  
+  .movie-poster-large {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .navbar-container {
+    flex-direction: column;
+  }
+  
+  .search-bar {
+    margin-top: 15px;
+    width: 100%;
+  }
+  
+  .search-bar input {
+    width: 100%;
+  }
+}
