@@ -8,6 +8,11 @@ const SearchBar = ({ onSearch }) => {
     onSearch(query);
   };
 
+  const handleClear = () => {
+    setQuery('');
+    onSearch('');
+  };
+
   return (
     <form onSubmit={handleSubmit} className="search-bar">
       <input
@@ -17,6 +22,11 @@ const SearchBar = ({ onSearch }) => {
         onChange={(e) => setQuery(e.target.value)}
       />
       <button type="submit">Search</button>
+      {query && (
+        <button type="button" onClick={handleClear} className="clear-button">
+          Clear
+        </button>
+      )}
     </form>
   );
 };

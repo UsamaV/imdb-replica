@@ -17,7 +17,7 @@ const App = () => {
       <div className="App">
         <Navbar onSearch={handleSearch} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home searchQuery={searchQuery} />} />
           <Route path="/movie/:id" element={<MovieDetails />} />
         </Routes>
       </div>
